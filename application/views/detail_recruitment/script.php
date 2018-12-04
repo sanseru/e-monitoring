@@ -50,6 +50,7 @@
                       <input type="checkbox" name="cek[]" value="BACKGROUND CHECK">
                       BACKGROUND CHECK
                     </label>
+                    <br>
                     <label>
                       <input type="checkbox" name="cek[]" value="H2S">
                       H2S
