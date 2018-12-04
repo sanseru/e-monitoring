@@ -24,51 +24,51 @@
                          <div class="checkbox">
                     <label>
                       <input type="checkbox" name="cek[]" value="ATLS">
-                      Pengalaman 5 tahun
-                    </label>
-                    <label>
-                      <input type="checkbox" name="cek[]" value="HIPERKES">
-                      STR
-                    </label>
-                    <label>
-                      <input type="checkbox" name="cek[]" value="HUET">
-                      ACLS
-                    </label>
-                    <label>
-                      <input type="checkbox"name="cek[]" value="BSS">
                       ATLS
                     </label>
                     <label>
+                      <input type="checkbox" name="cek[]" value="HIPERKES">
+                      HIPERKES
+                    </label>
+                    <label>
+                      <input type="checkbox" name="cek[]" value="HUET">
+                      HUET
+                    </label>
+                    <label>
+                      <input type="checkbox"name="cek[]" value="BSS">
+                      BSS
+                    </label>
+                    <label>
                       <input type="checkbox" name="cek[]" value="T-BOSIET">
-                      Hiperkes
+                      T-BOSIET
                     </label>
                     <label>
                       <input type="checkbox" name="cek[]" value="BTCLS">
-                      Hiperkes
+                      BTCLS
                     </label>
                     <label>
                       <input type="checkbox" name="cek[]" value="BACKGROUND CHECK">
-                      Hiperkes
+                      BACKGROUND CHECK
                     </label>
                     <label>
                       <input type="checkbox" name="cek[]" value="H2S">
-                      Hiperkes
+                      H2S
                     </label>
                     <label>
                       <input type="checkbox" name="cek[]" value="HSE Fundamental">
-                      Hiperkes
+                      HSE Fundamental
                     </label>
                     <label>
                       <input type="checkbox" name="cek[]" value="English Proficiency">
-                      Hiperkes
+                      English Proficiency
                     </label>
                     <label>
                       <input type="checkbox" name="cek[]" value="Driving LCS">
-                      Hiperkes
+                      Driving LCS
                     </label>
                     <label>
                       <input type="checkbox" name="cek[]" value="Defensive Driving">
-                      Hiperkes
+                      Defensive Driving
                     </label>
                   </div>
                      </div>
@@ -335,8 +335,8 @@
                     $("input[name='work_schedule']").val(data.work_schedule);
                     $("input[name='rt_bef']").val(data.ratefee_benef);
                     $("input[name='purpose']").val(data.purpose);
-                    $("input[name='to_site_date']").val(date1);
-                    $("input[name='on_duty_date']").val(date2);
+                    $("input[name='to_site_date']").val(data.to_site_date);
+                    $("input[name='on_duty_date']").val( data.on_duty_date);
 
 
                     // $("textarea[name='alamat']").val(data.alamat);
@@ -396,19 +396,23 @@
 
 
             $('#to_site_date').datepicker({
-                autoclose: true
+                autoclose: true,
+                format: 'yyyy-mm-dd'
                 })
 
             $('#on_duty_date').datepicker({
-                autoclose: true
+                autoclose: true,
+                format: 'yyyy-mm-dd'
                 })
 
             $('#to_site_date1').datepicker({
-                autoclose: true
+                autoclose: true,
+                format: 'yyyy-mm-dd'
                 })
 
             $('#on_duty_date2').datepicker({
-                autoclose: true
+                autoclose: true,
+                format: 'yyyy-mm-dd'
                 })
 
 

@@ -85,18 +85,18 @@ class Upload_excel extends CI_Controller {
 				$other = $row['P']; // Ambil data alamat
 
 
-				$qualification1 = ($atls = 1) ? "ATLS" : "" ;  
-			$qualification2 = ($hiperkes = 1) ? "HIPERKES" : "" ;  
-			$qualification3 = ($huet = 1) ? "HUET" : "" ;  
-			$qualification4 = ($bss = 1) ? "BSS" : "" ;  
-			$qualification5 = ($t_bosiet = 1) ? "T-BOSIET" : "" ;  
-			$qualification6 = ($btcls = 1) ? "BTCLS" : "" ;  
-			$qualification7 = ($background = 1) ? "BACKGROUND CHECK" : "" ;  
-			$qualification8 = ($h2s3 = 1) ? "H2S" : "" ;  
-			$qualification9 = ($hse_funda = 1) ? "HSE Fundamental" : "" ;  
-			$qualification10 = ($english = 1) ? "English Proficiency" : "" ;
-			$qualification11 = ($drivinglcs = 1) ? "Driving LCS" : "" ;  
-			$qualification12 = ($def_drive = 1) ? "Defensive Driving" : "" ;  
+				$qualification1 = ($atls == 1) ? "ATLS" : "" ;  
+			$qualification2 = ($hiperkes == 1) ? "HIPERKES" : "" ;  
+			$qualification3 = ($huet == 1) ? "HUET" : "" ;  
+			$qualification4 = ($bss == 1) ? "BSS" : "" ;  
+			$qualification5 = ($t_bosiet == 1) ? "T-BOSIET" : "" ;  
+			$qualification6 = ($btcls == 1) ? "BTCLS" : "" ;  
+			$qualification7 = ($background == 1) ? "BACKGROUND CHECK" : "" ;  
+			$qualification8 = ($h2s3 == 1) ? "H2S" : "" ;  
+			$qualification9 = ($hse_funda == 1) ? "HSE Fundamental" : "" ;  
+			$qualification10 = ($english == 1) ? "English Proficiency" : "" ;
+			$qualification11 = ($drivinglcs == 1) ? "Driving LCS" : "" ;  
+			$qualification12 = ($def_drive == 1) ? "Defensive Driving" : "" ;  
 
 			$result = $qualification1 . "," . $qualification2 . "," . $qualification3 . "," . $qualification4 . "," . $qualification5 . "," . $qualification6 . "," . $qualification7 . "," . $qualification8 . "," . $qualification9 . "," . $qualification10 . "," . $qualification11 . "," . $qualification12;
 			$id_main = $this->uri->segment(3);
