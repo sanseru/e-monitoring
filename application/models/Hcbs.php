@@ -228,7 +228,7 @@ function komentar($id){
 
 function back_from_komentar($id){
   $this->db->select('id_position');
-  $this->db->where('id_employee',6);
+  $this->db->where('id_employee',$id);
   return $this->db->get('t_rec_employee')->result();
 }
 
