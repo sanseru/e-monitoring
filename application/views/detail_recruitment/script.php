@@ -51,6 +51,9 @@
                       BACKGROUND CHECK
                     </label>
                     <br>
+                    <br>
+                    <br>
+
                     <label>
                       <input type="checkbox" name="cek[]" value="H2S">
                       H2S
