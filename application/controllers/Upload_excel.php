@@ -97,7 +97,6 @@ class Upload_excel extends CI_Controller {
 			$qualification10 = ($english == 1) ? "English Proficiency" : "" ;
 			$qualification11 = ($drivinglcs == 1) ? "Driving LCS" : "" ;  
 			$qualification12 = ($def_drive == 1) ? "Defensive Driving" : "" ;  
-
 			$result = $qualification1 . "," . $qualification2 . "," . $qualification3 . "," . $qualification4 . "," . $qualification5 . "," . $qualification6 . "," . $qualification7 . "," . $qualification8 . "," . $qualification9 . "," . $qualification10 . "," . $qualification11 . "," . $qualification12;
 			$id_main = $this->uri->segment(3);
 
