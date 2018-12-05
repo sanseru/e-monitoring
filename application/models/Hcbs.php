@@ -73,7 +73,7 @@ class Hcbs extends CI_Model{
 
           // $id = $this->uri->segment(3);
 
-      $this->datatables->select('a.detail_id,a.id_main,a.position,a.jml_person,a.location,a.created_by,b.username,a.qualification,a.poh,a.duration,a.work_schedule,a.ratefee_benef,a.purpose,a.to_site_date,a.on_duty_date');
+      $this->datatables->select('a.detail_id,a.id_main,a.exprience,a.position,a.jml_person,a.location,a.created_by,b.username,a.qualification,a.poh,a.duration,a.work_schedule,a.ratefee_benef,a.purpose,a.to_site_date,a.on_duty_date');
       $this->datatables->from('t_rec_main_detail a');
       $this->datatables->join('users b', 'a.created_by=b.id','left');
       $this->datatables->where('id_main', $test);

@@ -70,6 +70,7 @@ foreach ($ambil_data as $row) {
                   <th>Position</th>
                   <th>Position</th>
                   <th>Person</th>
+                  <th>Exprience</th>
                   <th>Qualification</th>
                   <th>Location</th>
                   <th>Point of Hire</th>
@@ -92,6 +93,7 @@ foreach ($ambil_data as $row) {
                 <th>Position</th>
                 <th>Position</th>
                   <th>Person</th>
+                  <th>Exprience</th>
                   <th>Qualification</th>
                   <th>Location</th>
                   <th>Point of Hire</th>

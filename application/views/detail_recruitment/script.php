@@ -281,6 +281,7 @@
                                                 {"data": "jml_person"},
                                                 //render number format for price
                                                 // {"data": "product_price", render: $.fn.dataTable.render.number(',', '.', '')},
+                                                {"data": "exprience"},
                                                 {"data": "qualification"},
                                                 {"data": "location"},
                                                 {"data": "poh"},
