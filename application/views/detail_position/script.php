@@ -122,6 +122,36 @@
   </div>
 </form>
 
+<!-- Modal update status Product-->
+<form id="add-row-form" action="<?php echo site_url('recruitment/update_employe_diterima');?>" method="post">
+  <div class="modal fade" id="Modalterima" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;
+            </span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Delete Product
+          </h4>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" name="product_code" class="form-control" required>
+          <input type="hidden" id="detail_id" name="detail_id" value="<?php echo $test; ?>">
+          <strong>Apakah anda yakin ingin menerima karyawan ini?
+          </strong>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">No
+          </button>
+          <button type="submit" class="btn btn-success">Yes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
 <!-- Modal Add Product-->
 <form id="add-row-form" action="<?php echo site_url('recruitment/save_komentar');?>" method="post">
   <div class="modal fade" id="myModalAddKomentar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -203,6 +233,7 @@
           // {"data": "product_price", render: $.fn.dataTable.render.number(',', '.', '')},
             {"data": "e_status","className": "text-center"},
             {"data": "description","className": "text-center"},
+            {"data": "is_accept","visible": false,"targets": 3},
             {"data": "view","className": "text-center"},
         ],
         order: [[1, 'asc']],
@@ -211,6 +242,9 @@
           var page = info.iPage;
           var length = info.iLength;
           $('td:eq(0)', row).html();
+          if (data.is_accept == "1") {
+            $('td', row).css('background-color', '#e6ffcc');
+          }
         }
       }
                                          );
@@ -232,7 +266,7 @@
         $('[name="back"]').val(position);
         // $('[name="pic_medsite"]').val(medsit);
       }
-                      );
+      );
       // End Edit Records
       // get delete Records
       $('#mytable').on('click','.delete_record',function(){
@@ -240,7 +274,15 @@
         $('#ModalDelete').modal('show');
         $('[name="product_code"]').val(code);
       }
-                      );
+      );
+
+            // get delete Records
+            $('#mytable').on('click','.diterima_record',function(){
+        var code=$(this).data('code');
+        $('#Modalterima').modal('show');
+        $('[name="product_code"]').val(code);
+      }
+      );
 
       // End delete Records
       $('#date_priod').datepicker({

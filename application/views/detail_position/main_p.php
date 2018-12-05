@@ -75,8 +75,7 @@ foreach ($ambil_data as $row) {
                   <th>Nama</th>
                   <th>Status Terakhir</th>
                   <th>Description</th>
-
-
+                  <th>Diterima</th>
                   <th>Action</th>
 
                 </tr>
@@ -90,6 +89,7 @@ foreach ($ambil_data as $row) {
                 <th>Nama</th>
                   <th>Status Terakhir</th>
                   <th>Description</th>
+                  <th>Diterima</th>
                   <th>Action</th>
                 </tr>
                 </tfoot>

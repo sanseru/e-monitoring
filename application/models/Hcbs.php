@@ -155,12 +155,12 @@ return $result;
 
     // $id = $this->uri->segment(3);
 
-$this->datatables->select('a.id_employee,a.id_position,a.e_name,a.e_status,a.description,a.created_by,b.username,');
+$this->datatables->select('a.id_employee,a.id_position,a.e_name,a.is_accept,a.e_status,a.description,a.created_by,b.username');
 $this->datatables->from('t_rec_employee a');
 $this->datatables->join('users b', 'a.created_by=b.id','left');
 $this->datatables->where('a.id_position', $id);
 $this->datatables->edit_column('client_v', '<a href="../komentar_tl/$1" class="comment btn btn-info" data-code="$1" data-id_main="$2" >$2</a>', 'id_employee,e_name');
-$this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-name="$2" data-status="$3" data-position="$4" >Edit</a> <a href="../komentar_tl/$1" class="komentar btn btn-info" data-code="$1" data-id_main="$2" >Komentar</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a>','id_employee,e_name,e_status,id_position');
+$this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-name="$2" data-status="$3" data-position="$4" >Edit</a> <a href="../komentar_tl/$1" class="komentar btn btn-info" data-code="$1" data-id_main="$2" >Komentar</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a><a href="javascript:void(0);" class="diterima_record btn btn-success" data-code="$1" data-name="$2" data-status="$3" data-position="$4" > Diterima</a>','id_employee,e_name,e_status,id_position');
 return $this->datatables->generate();
 }
 
@@ -196,6 +196,22 @@ $this->db->where('id_employee',$id_main);
 $result=$this->db->update('t_rec_employee', $data);
 return $result;
 }
+
+
+    //update employee data method
+    function update_product_employe_status(){
+      date_default_timezone_set('Asia/Jakarta');
+      $now = date('y-m-d H:i:s');
+      $id_main = $this->input->post('id_employee');
+      $product_code=$this->input->post('product_code');
+      $data=array(
+  'is_accept'        => 1,
+);
+$this->db->where('id_employee',$product_code);
+$result=$this->db->update('t_rec_employee', $data);
+return $result;
+}
+
   //delete data method
   function delete_product_employee(){
     $product_code=$this->input->post('product_code');

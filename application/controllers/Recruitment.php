@@ -191,6 +191,15 @@ class Recruitment extends CI_Controller
         $this->Hcbs->update_product_employe();
         redirect('Recruitment/detail_position/' . $id_back);
     }
+
+    function update_employe_diterima() //update record method
+    {
+        $id_back = $this->input->post('detail_id');
+
+        $this->Hcbs->update_product_employe_status();
+        redirect('Recruitment/detail_position/' . $id_back);
+    }
+
     function delete_employee() //delete record method
     {
         $id_back = $this->input->post('detail_id');
