@@ -244,6 +244,7 @@
           $('td:eq(0)', row).html();
           if (data.is_accept == "1") {
             $('td', row).css('background-color', '#e6ffcc');
+
           }
         }
       }
