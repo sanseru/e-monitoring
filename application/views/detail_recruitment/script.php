@@ -263,7 +263,7 @@
           </div>
        </div>
    </form>
-   <input type="text" id="test" value="<?php echo $test; ?>">
+   <input type="hidden" id="test" value="<?php echo $test; ?>">
 <script>
     $(document).ready(function(){
         // Setup datatables
