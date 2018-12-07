@@ -282,6 +282,7 @@
  
       var test = $('#test').val();
       var table = $("#mytable").dataTable({
+        "scrollX": true,
           initComplete: function() {
               var api = this.api();
               $('#mytable_filter input')
@@ -323,7 +324,6 @@
               var length = info.iLength;
               $('td:eq(0)', row).html();
           }
- 
       });
             // end setup datatables
             // get Edit Records
