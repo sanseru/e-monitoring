@@ -1,3 +1,4 @@
+
   <!-- Modal Add Product-->
     <form id="add-row-form" action="<?php echo site_url('recruitment/save_detail');?>" method="post">
        <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -17,87 +18,96 @@
                         <label>Masukan Jumlah Personil Yang Di Minta</label>
                          <input type="text" id = "jml_person" name="jml_person" class="form-control" placeholder="Jumlah Personel" required>
                      </div>
-
+                     <div class="form-group">
+                        <label>Masukan Exprience Yang Dibutuhkan</label>
+                         <input type="text" id = "exp" name="exp" class="form-control" placeholder="Masukan Pengalaman" required>
+                     </div>
                      <div class="form-group">
                         <label>Masukan Qualification Yang Di Butuhkan</label>
                          <!-- <input type="text" name="qualification" class="form-control" placeholder="Qualification" required> -->
                          <div class="checkbox">
                     <label>
-                      <input type="checkbox" name="cek[]" value="ATLS">
-                      ATLS
+                      <input type="checkbox" name="ATLS" value="ATLS">
+                      ATLS &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="HIPERKES">
-                      HIPERKES
+                      <input type="checkbox" name="HIPERKES" value="HIPERKES">
+                      HIPERKES &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="HUET">
-                      HUET
+                      <input type="checkbox" name="HUET" value="HUET">
+                      HUET &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox"name="cek[]" value="BSS">
-                      BSS
+                      <input type="checkbox"name="BSS" value="BSS">
+                      BSS &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="T-BOSIET">
-                      T-BOSIET
+                      <input type="checkbox" name="T-BOSIET" value="T-BOSIET">
+                      T-BOSIET&nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="BTCLS">
-                      BTCLS
+                      <input type="checkbox" name="BTCLS" value="BTCLS">
+                      BTCLS&nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="BACKGROUND CHECK">
-                      BACKGROUND CHECK
+                      <input type="checkbox" name="BACKGROUNDCHECK" value="BACKGROUND CHECK">
+                      BACKGROUND CHECK&nbsp;
                     </label>
                     <br>
                     <br>
-                    <br>
-
                     <label>
-                      <input type="checkbox" name="cek[]" value="H2S">
-                      H2S
+                      <input type="checkbox" name="H2S" value="H2S">
+                      H2S&nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="HSE Fundamental">
-                      HSE Fundamental
+                      <input type="checkbox" name="HSE" value="HSE Fundamental">
+                      HSE Fundamental&nbsp; 
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="English Proficiency">
-                      English Proficiency
+                      <input type="checkbox" name="English" value="English Proficiency">
+                      English Proficiency&nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="Driving LCS">
-                      Driving LCS
+                      <input type="checkbox" name="Driving" value="Driving LCS">
+                      Driving LCS&nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" value="Defensive Driving">
-                      Defensive Driving
+                      <input type="checkbox" name="Defensive" value="Defensive Driving">
+                      Defensive Driving&nbsp;
                     </label>
                   </div>
                      </div>
                     <div class="form-group">
+                        <label>Masuka Lokasi Site</label>
                          <input type="text" name="location" class="form-control" placeholder="Location" required>
                      </div>
                     <div class="form-group">
+                        <label>Masukan Point Of Hire</label>
                          <input type="text" name="poh" class="form-control" placeholder="Point Of Hire" required>
                      </div>
                     <div class="form-group">
+                        <label>Masukan Durasi Project</label>
                          <input type="text" name="duration" class="form-control" placeholder="Duration" required>
                      </div>
                     <div class="form-group">
+                        <label>Masukan Work Schedule</label>
                          <input type="text" name="work_schedule" class="form-control" placeholder="Work Schedule" required>
                      </div>
                      <div class="form-group">
+                         <label>Masukan Rate Benefit</label>
                          <input type="text" name="rt_bef" class="form-control" placeholder="Rate Fee And Benefit" required>
                      </div>
                     <div class="form-group">
+                        <label>Masukan Tujuannya</label>
                          <input type="text" name="purpose" class="form-control" placeholder="Purpose" required>
                      </div>
                       <div class="form-group">
+                          <label>Kapan akan dikirim ke Site</label>
                          <input type="text" id="to_site_date" name="to_site_date" class="form-control" placeholder="To Site Date" required>
                      </div>
                       <div class="form-group">
+                          <label>Kapan akan Mulai Kerja</label>
                          <input type="text" id="on_duty_date" name="on_duty_date" class="form-control" placeholder="On Duty Date" required>
                      </div>
                  </div>
@@ -123,89 +133,101 @@
                      <div class="form-group">
                           <input type="hidden" name="id_main">
                           <input type="hidden" name="detail">
-
+                          <label>Masukan Nama Posisi</label>
                          <input type="text" name="position" class="form-control" placeholder="Position" required>
                      </div>
                      <div class="form-group">
+                     <label>Masukan Jumlah Personil Yang Di Minta</label>
                          <input type="text" id = "jml_person" name="jml_person" class="form-control" placeholder="Jumlah Personel" required>
                      </div>
-
+                     <div class="form-group">
+                        <label>Masukan Exprience Yang Dibutuhkan</label>
+                         <input type="text" id = "exp" name="exp" class="form-control" placeholder="Masukan Pengalaman" required>
+                     </div>
                     <div class="form-group">
                         <label>Masukan Qualification Yang Di Butuhkan</label>
                          <!-- <input type="text" name="qualification" class="form-control" placeholder="Qualification" required> -->
                          <div class="checkbox">
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_0" value="ATLS">
-                      ATLS
+                      <input type="checkbox" name="ATLS" id="cek_0" value="ATLS">
+                      ATLS &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_1" value="HIPERKES">
-                      HIPERKES
+                      <input type="checkbox" name="HIPERKES" id="cek_1" value="HIPERKES">
+                      HIPERKES &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_2" value="HUET">
-                      HUET
+                      <input type="checkbox" name="HUET" id="cek_2" value="HUET">
+                      HUET &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox"name="cek[]" id="cek_3" value="BSS">
-                      BSS
+                      <input type="checkbox"name="BSS" id="cek_3" value="BSS">
+                      BSS &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_4" value="T-BOSIET">
-                      T-BOSIET
+                      <input type="checkbox" name="T-BOSIET" id="cek_4" value="T-BOSIET">
+                      T-BOSIET &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_5" value="BTCLS">
-                      BTCLS
+                      <input type="checkbox" name="BTCLS" id="cek_5" value="BTCLS">
+                      BTCLS &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_6" value="BACKGROUND CHECK">
-                      BACKGROUND CHECK
+                      <input type="checkbox" name="BACKGROUND CHECK" id="cek_6" value="BACKGROUND CHECK">
+                      BACKGROUND CHECK &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_7" value="H2S">
-                      H2S
+                      <input type="checkbox" name="H2S" id="cek_7" value="H2S">
+                      H2S&nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_8" value="HSE Fundamental">
-                      HSE Fundamental
+                      <input type="checkbox" name="HSE" id="cek_8" value="HSE Fundamental">
+                      HSE Fundamental &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_9" value="English Proficiency">
-                      English Proficiency
+                      <input type="checkbox" name="English" id="cek_9" value="English Proficiency">
+                      English Proficiency &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_10" value="Driving LCS">
-                      Driving LCS
+                      <input type="checkbox" name="Driving" id="cek_10" value="Driving LCS">
+                      Driving LCS &nbsp;
                     </label>
                     <label>
-                      <input type="checkbox" name="cek[]" id="cek_11" value="Defensive Driving">
-                      Defensive Driving
+                      <input type="checkbox" name="Defensive" id="cek_11" value="Defensive Driving">
+                      Defensive Driving &nbsp;
                     </label>
                   </div>
                      </div>
                     <div class="form-group">
+                    <label>Masuka Lokasi Site</label>
                          <input type="text" name="location" class="form-control" placeholder="Location" required>
                      </div>
                     <div class="form-group">
+                    <label>Masukan Point Of Hire</label>
                          <input type="text" name="poh" class="form-control" placeholder="Point Of Hire" required>
                      </div>
                     <div class="form-group">
+                    <label>Masukan Durasi Project</label>
                          <input type="text" name="duration" class="form-control" placeholder="Duration" required>
                      </div>
                     <div class="form-group">
+                    <label>Masukan Work Schedule</label>
                          <input type="text" name="work_schedule" class="form-control" placeholder="Work Schedule" required>
                      </div>
                      <div class="form-group">
+                     <label>Masukan Rate Benefit</label>
                          <input type="text" name="rt_bef" class="form-control" placeholder="Rate Fee And Benefit" required>
                      </div>
                     <div class="form-group">
+                    <label>Masukan Tujuannya</label>
                          <input type="text" name="purpose" class="form-control" placeholder="Purpose" required>
                      </div>
                       <div class="form-group">
+                      <label>Kapan akan dikirim ke Site</label>
                          <input type="text" id="to_site_date1" name="to_site_date" class="form-control" placeholder="To Site Date" required>
                      </div>
                       <div class="form-group">
+                      <label>Kapan akan Mulai Kerja</label>
                          <input type="text" id="on_duty_date2" name="on_duty_date" class="form-control" placeholder="On Duty Date" required>
                      </div>
                  </div>
@@ -342,6 +364,7 @@
                     $("input[name='purpose']").val(data.purpose);
                     $("input[name='to_site_date']").val(data.to_site_date);
                     $("input[name='on_duty_date']").val( data.on_duty_date);
+                    $("input[name='exp']").val( data.exprience);
 
 
                     // $("textarea[name='alamat']").val(data.alamat);

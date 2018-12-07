@@ -104,8 +104,24 @@ class Recruitment extends CI_Controller
     function save_detail() //insert record method
     {
         $id_back = $this->input->post('id_main');
-        
-        $this->Hcbs->insert_product_detail();
+        $atls = (isset($_POST['ATLS'])) ? $_POST['ATLS'] : "";
+        $hiperkes = (isset($_POST['HIPERKES'])) ? $_POST['HIPERKES'] : "";
+        $huet = (isset($_POST['HUET'])) ? $_POST['HUET'] : "";
+        $bss = (isset($_POST['BSS'])) ? $_POST['BSS'] : "";
+        $bosiet = (isset($_POST['T-BOSIET'])) ? $_POST['T-BOSIET'] : "";
+        $btcls = (isset($_POST['BTCLS'])) ? $_POST['BTCLS'] : "";
+        $back = (isset($_POST['BACKGROUNDCHECK'])) ? $_POST['BACKGROUNDCHECK'] : "";
+        $h2s = (isset($_POST['H2S'])) ? $_POST['H2S'] : "";
+        $hse = (isset($_POST['HSE'])) ? $_POST['HSE'] : "";
+        $english = (isset($_POST['English'])) ? $_POST['English'] : "";
+        $drive = (isset($_POST['Driving'])) ? $_POST['Driving'] : "";
+        $defen = (isset($_POST['Defensive'])) ? $_POST['Defensive'] : "";
+
+
+
+$hasil = array($atls,$hiperkes,$huet,$bss,$bosiet,$btcls,$back,$h2s,$hse,$english,$drive,$defen);
+$josn = json_encode($hasil);
+$this->Hcbs->insert_product_detail($josn);
         redirect('Recruitment/detail_perclient/' . $id_back);
     }
     
@@ -126,7 +142,7 @@ class Recruitment extends CI_Controller
         $kirim['purpose'] = $e->purpose;
         $kirim['to_site_date'] = $e->to_site_date;
         $kirim['on_duty_date'] = $e->on_duty_date;
-
+        $kirim['exprience'] = $e->exprience;
         $this->output
         ->set_content_type('application/json')
         ->set_output(json_encode($kirim));
@@ -138,7 +154,22 @@ class Recruitment extends CI_Controller
     {
         $id_back = $this->input->post('id_main');
 
-        $this->Hcbs->update_product_detail();
+        $atls = (isset($_POST['ATLS'])) ? $_POST['ATLS'] : "";
+        $hiperkes = (isset($_POST['HIPERKES'])) ? $_POST['HIPERKES'] : "";
+        $huet = (isset($_POST['HUET'])) ? $_POST['HUET'] : "";
+        $bss = (isset($_POST['BSS'])) ? $_POST['BSS'] : "";
+        $bosiet = (isset($_POST['T-BOSIET'])) ? $_POST['T-BOSIET'] : "";
+        $btcls = (isset($_POST['BTCLS'])) ? $_POST['BTCLS'] : "";
+        $back = (isset($_POST['BACKGROUNDCHECK'])) ? $_POST['BACKGROUNDCHECK'] : "";
+        $h2s = (isset($_POST['H2S'])) ? $_POST['H2S'] : "";
+        $hse = (isset($_POST['HSE'])) ? $_POST['HSE'] : "";
+        $english = (isset($_POST['English'])) ? $_POST['English'] : "";
+        $drive = (isset($_POST['Driving'])) ? $_POST['Driving'] : "";
+        $defen = (isset($_POST['Defensive'])) ? $_POST['Defensive'] : "";
+        $hasil = array($atls,$hiperkes,$huet,$bss,$bosiet,$btcls,$back,$h2s,$hse,$english,$drive,$defen);
+        $josn = json_encode($hasil);
+
+        $this->Hcbs->update_product_detail($josn);
         redirect('Recruitment/detail_perclient/' . $id_back);
     }
 

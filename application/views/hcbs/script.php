@@ -5,20 +5,24 @@
              <div class="modal-content">
                  <div class="modal-header">
                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                     <h4 class="modal-title" id="myModalLabel">Add New</h4>
+                     <h4 class="modal-title" id="myModalLabel">Add New Client</h4>
                  </div>
                  <div class="modal-body">
                      <div class="form-group">
+                         <label>Masukan Nama Client</label>
                          <input type="text" name="client" class="form-control" placeholder="Client" required>
                      </div>
                      <div class="form-group">
+                        <label>Masukan Project Priode</label>
                          <input type="text" id = "date_priod" name="project_priod" class="form-control" placeholder="Project Priod" required>
                      </div>
 
                      <div class="form-group">
+                     <label>Masukan PIC Marketing</label>
                          <input type="text" name="pic_market" class="form-control" placeholder="PIC Marketing" required>
                      </div>
                     <div class="form-group">
+                    <label>Masukan PIC Medsite</label>
                          <input type="text" name="pic_medsite" class="form-control" placeholder="PIC Medsite" required>
                      </div>
 

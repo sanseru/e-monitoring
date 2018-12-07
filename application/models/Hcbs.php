@@ -78,22 +78,23 @@ class Hcbs extends CI_Model{
       $this->datatables->join('users b', 'a.created_by=b.id','left');
       $this->datatables->where('id_main', $test);
       $this->datatables->edit_column('client_v', '<button type="button" class="btn btn-block btn-info"><a id="link" href="../detail_position/$1"><b>$2</b></a></button>', 'detail_id, position');
-      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-id_main="$2" data-position="$3" data-jml_person="$4" data-location="$5" data-qualification="$6" data-poh="$7" data-duration="$8" data-schedule="$9" data-rate="$10" data-purpose="$11" data-site="$12" data-date="$13">Edit</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a>','detail_id,id_main,position,jml_person,location,qualification,poh,duration,work_schedule,ratefee_benef,purpose,to_site_date,on_duty_date');
+      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-id_main="$2" data-position="$3" data-jml_person="$4" data-location="$5" data-qualification="$6" data-poh="$7" data-duration="$8" data-schedule="$9" data-rate="$10" data-purpose="$11" data-site="$12" data-date="$13">Edit</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a>','detail_id,id_main,position,jml_person,location,qualification,poh,duration,work_schedule,ratefee_benef,purpose,to_site_date,on_duty_date,exprience');
       return $this->datatables->generate();
   }
     //insert data method
-    function insert_product_detail(){
+    function insert_product_detail($cekaja){
       date_default_timezone_set('Asia/Jakarta');
       $now = date('y-m-d H:i:s');
       $cdate1 = date('Y-m-d', strtotime($this->input->post('to_site_date')));
       $cdate2 = date('Y-m-d', strtotime($this->input->post('on_duty_date')));
-
+      $check = $this->input->post('cek');
+    $hasil = str_replace(array('[',']','"'),array('','',''),$cekaja);
     $data=array(
       'id_main'        => $this->input->post('id_main'),
       'position'        => $this->input->post('position'),
       'jml_person'       => $this->input->post('jml_person'),
-      // 'qualification' => $this->input->post('qualification'),
-      'qualification'=>implode(",",$this->input->post('cek')),
+      'exprience' => $this->input->post('exp'),
+      'qualification'=>$hasil,
       'location' => $this->input->post('location'),
       'poh' => $this->input->post('poh'),
       'duration' => $this->input->post('duration'),
@@ -110,17 +111,19 @@ class Hcbs extends CI_Model{
     return $result;
 }
     //update data method
-    function update_product_detail(){
+    function update_product_detail($hasil_update){
       date_default_timezone_set('Asia/Jakarta');
       $now = date('y-m-d H:i:s');
       $cdate1 = date('Y-m-d', strtotime($this->input->post('to_site_date')));
       $cdate2 = date('Y-m-d', strtotime($this->input->post('on_duty_date')));
       $id_main = $this->input->post('detail');
+      $hasil = str_replace(array('[',']','"'),array('','',''),$hasil_update);
+
       $data=array(
   'position'        => $this->input->post('position'),
   'jml_person'       => $this->input->post('jml_person'),
-  // 'qualification' => $this->input->post('qualification'),
-  'qualification'=>implode(",",$this->input->post('cek')),
+  'exprience' => $this->input->post('exp'),
+  'qualification'=>$hasil,
   'location' => $this->input->post('location'),
   'poh' => $this->input->post('poh'),
   'duration' => $this->input->post('duration'),
