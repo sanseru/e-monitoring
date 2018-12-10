@@ -2,7 +2,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.1.0
     </div>
-    <strong>Copyright &copy; 2018 <a href="https://adminlte.io">Haris Lukman Hakim</a>.</strong> All rights
+    <strong>Copyright &copy; 2018 <a href="https://mas.medikaplaza.com">Haris Lukman Hakim</a>.</strong> All rights
     reserved.
   </footer>
 

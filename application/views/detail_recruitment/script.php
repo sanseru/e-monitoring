@@ -1,4 +1,11 @@
 
+  <style>
+  .checkbox-grid li {
+    display: block;
+    float: left;
+    width: 30%;
+}
+  </style>
   <!-- Modal Add Product-->
     <form id="add-row-form" action="<?php echo site_url('recruitment/save_detail');?>" method="post">
        <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -25,59 +32,61 @@
                      <div class="form-group">
                         <label>Masukan Qualification Yang Di Butuhkan</label>
                          <!-- <input type="text" name="qualification" class="form-control" placeholder="Qualification" required> -->
-                         <div class="checkbox">
-                    <label>
+                         <ul class="checkbox-grid">
+                    <li>
                       <input type="checkbox" name="ATLS" value="ATLS">
                       ATLS &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="HIPERKES" value="HIPERKES">
                       HIPERKES &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="HUET" value="HUET">
                       HUET &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox"name="BSS" value="BSS">
                       BSS &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="T-BOSIET" value="T-BOSIET">
                       T-BOSIET&nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="BTCLS" value="BTCLS">
                       BTCLS&nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="BACKGROUNDCHECK" value="BACKGROUND CHECK">
                       BACKGROUND CHECK&nbsp;
-                    </label>
+                    </li>
                     <br>
                     <br>
-                    <label>
+                    <li>
                       <input type="checkbox" name="H2S" value="H2S">
                       H2S&nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="HSE" value="HSE Fundamental">
                       HSE Fundamental&nbsp; 
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="English" value="English Proficiency">
                       English Proficiency&nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="Driving" value="Driving LCS">
                       Driving LCS&nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="Defensive" value="Defensive Driving">
                       Defensive Driving&nbsp;
-                    </label>
-                  </div>
+                    </li>
+                  </ul>
                      </div>
+                     <br>
+                     <br>
                     <div class="form-group">
                         <label>Masuka Lokasi Site</label>
                          <input type="text" name="location" class="form-control" placeholder="Location" required>
@@ -140,6 +149,7 @@
                      <label>Masukan Jumlah Personil Yang Di Minta</label>
                          <input type="text" id = "jml_person" name="jml_person" class="form-control" placeholder="Jumlah Personel" required>
                      </div>
+                     
                      <div class="form-group">
                         <label>Masukan Exprience Yang Dibutuhkan</label>
                          <input type="text" id = "exp" name="exp" class="form-control" placeholder="Masukan Pengalaman" required>
@@ -147,56 +157,56 @@
                     <div class="form-group">
                         <label>Masukan Qualification Yang Di Butuhkan</label>
                          <!-- <input type="text" name="qualification" class="form-control" placeholder="Qualification" required> -->
-                         <div class="checkbox">
-                    <label>
+                         <ul class="checkbox-grid">
+                    <li>
                       <input type="checkbox" name="ATLS" id="cek_0" value="ATLS">
                       ATLS &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="HIPERKES" id="cek_1" value="HIPERKES">
                       HIPERKES &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="HUET" id="cek_2" value="HUET">
                       HUET &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox"name="BSS" id="cek_3" value="BSS">
                       BSS &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="T-BOSIET" id="cek_4" value="T-BOSIET">
                       T-BOSIET &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="BTCLS" id="cek_5" value="BTCLS">
                       BTCLS &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="BACKGROUND CHECK" id="cek_6" value="BACKGROUND CHECK">
                       BACKGROUND CHECK &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="H2S" id="cek_7" value="H2S">
                       H2S&nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="HSE" id="cek_8" value="HSE Fundamental">
                       HSE Fundamental &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="English" id="cek_9" value="English Proficiency">
                       English Proficiency &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="Driving" id="cek_10" value="Driving LCS">
                       Driving LCS &nbsp;
-                    </label>
-                    <label>
+                    </li>
+                    <li>
                       <input type="checkbox" name="Defensive" id="cek_11" value="Defensive Driving">
                       Defensive Driving &nbsp;
-                    </label>
-                  </div>
+                    </li>
+                  </ul>
                      </div>
                     <div class="form-group">
                     <label>Masuka Lokasi Site</label>
