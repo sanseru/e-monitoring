@@ -293,6 +293,8 @@
       var test = $('#test').val();
       var table = $("#mytable").dataTable({
         "scrollX": true,
+        "fixedColumns": true,
+
           initComplete: function() {
               var api = this.api();
               $('#mytable_filter input')
@@ -315,7 +317,26 @@
                                                 //render number format for price
                                                 // {"data": "product_price", render: $.fn.dataTable.render.number(',', '.', '')},
                                                 {"data": "exprience"},
-                                                {"data": "qualification"},
+                                                {"data": "qualification", 
+                                                "render": function (data, type, row ) {
+                                                // data_replace = data.replace(/\,/g, ' ');
+                                                // return '<b>'+data_replace+'</b>';},
+                                                // data.split(",").join("<br/>");
+                                                pisah = data.split(",");
+                                                jadi=[];
+                                                for (var j = 0; j < pisah.length; j++) {
+                                                    if (pisah[j]==""){
+                                                    jadi[j]= "";
+                                                }else{
+                                                    jadi[j]= '&#10004;'+' '+pisah[j]+'<br>';
+                                                }
+                                                    // alert(jadi);
+                                                }
+                                                coba = jadi[0]+jadi[1] + jadi[2] + jadi[3] +jadi[4] + jadi[5] +jadi[6] +jadi[7] +jadi[8] +jadi[9] +jadi[10] +jadi[11]; 
+
+                                                return '<b>'+coba+'</b>';
+                                                }
+                                                },
                                                 {"data": "location"},
                                                 {"data": "poh"},
                                                 {"data": "duration"},
@@ -453,8 +474,16 @@
                 format: 'yyyy-mm-dd'
                 })
 
+        $("td").each(function(){
+   
+   $(this).html($(this).html().replace(/,/g , ''));
+});
+
 
     });
+
+
+
 function downloadsap(){
   $.ajax ({
 
