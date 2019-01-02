@@ -45,13 +45,20 @@ foreach ($ambil_data as $row) {
                     <div class="callout callout-info">
                     <p>Duration:  <?php echo $row->duration;?></p>
                     <p>Work Schedule:  <?php echo $row->duration;?></p>
-                    <p>Rate Fee and Benefit:  <?php echo $row->ratefee_benef;?></p>
+                    <p>Rate Fee and Benefit:  <?php echo $row->ratefee_benef;?> / <?php echo $row->ratefee_benef_2;?></p>
                     </div>
               </div>
               <div class="col-xs-4">     
               <div class="callout callout-danger">
             <p>Purpose:  <?php echo $row->purpose;?></p>
-            <p>Qualification:  <?php echo $row->qualification;?></p>
+            <p>Qualification:  <?php
+            $explode = preg_split('@,@', $row->qualification, NULL, PREG_SPLIT_NO_EMPTY);
+            foreach ($explode as $value) {
+              echo $value . "\n";
+           }
+            ?>
+            
+            </p>
             <p>Pic Marketing And Medsite:  <?php echo $row->pic_market;?> & <?php echo $row->pic_medsite;?></p>
 
                     </div>

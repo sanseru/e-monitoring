@@ -87,6 +87,10 @@
                      </div>
                      <br>
                      <br>
+                     <div class="form-group">
+                        <label>Kualifikasi Lain</label>
+                         <input type="text" name="other" class="form-control" placeholder="Kualifikasi Lainnya" required>
+                     </div>
                     <div class="form-group">
                         <label>Masuka Lokasi Site</label>
                          <input type="text" name="location" class="form-control" placeholder="Location" required>
@@ -99,23 +103,31 @@
                         <label>Masukan Durasi Project</label>
                          <input type="text" name="duration" class="form-control" placeholder="Duration" required>
                      </div>
-                    <div class="form-group">
-                        <label>Masukan Work Schedule</label>
+                     <div class="form-group">
+                        <label>Masukan Tujuannya</label>
+                         <input type="text" name="purpose" class="form-control" placeholder="Tujuannya" required>
+                     </div>
+                    <div class="form-group col-xs-6">
+                        <label>Masukan Jadwal kerja 1</label>
                          <input type="text" name="work_schedule" class="form-control" placeholder="Work Schedule" required>
                      </div>
-                     <div class="form-group">
-                         <label>Masukan Rate Benefit</label>
+                     <div class="form-group col-xs-6">
+                     <label>Masukan Jadwal Kerja 2</label>
+                         <input type="text" name="work_schedule_2" class="form-control" placeholder="Work Schedule" required>
+                     </div>
+                     <div class="form-group col-xs-6">
+                     <label>Masukan Rate Benefit</label>
                          <input type="text" name="rt_bef" class="form-control" placeholder="Rate Fee And Benefit" required>
                      </div>
-                    <div class="form-group">
-                        <label>Masukan Tujuannya</label>
-                         <input type="text" name="purpose" class="form-control" placeholder="Purpose" required>
+                     <div class="form-group col-xs-6">
+                     <label>Masukan Rate Benefit</label>
+                         <input type="text" name="rt_bef_2" class="form-control" placeholder="Rate Fee And Benefit" required>
                      </div>
-                      <div class="form-group">
+                      <div class="form-group col-xs-6">
                           <label>Kapan akan dikirim ke Site</label>
                          <input type="text" id="to_site_date" name="to_site_date" class="form-control" placeholder="To Site Date" required>
                      </div>
-                      <div class="form-group">
+                      <div class="form-group col-xs-6">
                           <label>Kapan akan Mulai Kerja</label>
                          <input type="text" id="on_duty_date" name="on_duty_date" class="form-control" placeholder="On Duty Date" required>
                      </div>
@@ -208,37 +220,49 @@
                     </li>
                   </ul>
                      </div>
+                     <div class="form-group">
+                        <label>Kualifikasi Lain</label>
+                         <input type="text" name="other" class="form-control" placeholder="Kualifikasi Lainnya" required>
+                     </div>
                     <div class="form-group">
-                    <label>Masuka Lokasi Site</label>
+                        <label>Masuka Lokasi Site</label>
                          <input type="text" name="location" class="form-control" placeholder="Location" required>
                      </div>
                     <div class="form-group">
-                    <label>Masukan Point Of Hire</label>
+                        <label>Masukan Point Of Hire</label>
                          <input type="text" name="poh" class="form-control" placeholder="Point Of Hire" required>
                      </div>
                     <div class="form-group">
-                    <label>Masukan Durasi Project</label>
+                        <label>Masukan Durasi Project</label>
                          <input type="text" name="duration" class="form-control" placeholder="Duration" required>
                      </div>
-                    <div class="form-group">
-                    <label>Masukan Work Schedule</label>
+                     <div class="form-group">
+                        <label>Masukan Tujuannya</label>
+                         <input type="text" name="purpose" class="form-control" placeholder="Tujuannya" required>
+                     </div>
+                    <div class="form-group col-xs-6">
+                        <label>Masukan Jadwal kerja 1</label>
                          <input type="text" name="work_schedule" class="form-control" placeholder="Work Schedule" required>
                      </div>
-                     <div class="form-group">
+                     <div class="form-group col-xs-6">
+                     <label>Masukan Jadwal Kerja 2</label>
+                         <input type="text" name="work_schedule_2" class="form-control" placeholder="Work Schedule" required>
+                     </div>
+                     <div class="form-group col-xs-6">
                      <label>Masukan Rate Benefit</label>
                          <input type="text" name="rt_bef" class="form-control" placeholder="Rate Fee And Benefit" required>
                      </div>
-                    <div class="form-group">
-                    <label>Masukan Tujuannya</label>
-                         <input type="text" name="purpose" class="form-control" placeholder="Purpose" required>
+                     <div class="form-group col-xs-6">
+                     <label>Masukan Rate Benefit</label>
+                         <input type="text" name="rt_bef_2" class="form-control" placeholder="Rate Fee And Benefit" required>
                      </div>
-                      <div class="form-group">
-                      <label>Kapan akan dikirim ke Site</label>
-                         <input type="text" id="to_site_date1" name="to_site_date" class="form-control" placeholder="To Site Date" required>
+                      <div class="form-group col-xs-6">
+                          <label>Kapan akan dikirim ke Site</label>
+                         <input type="text" id="to_site_date" name="to_site_date" class="form-control" placeholder="To Site Date" required>
                      </div>
-                      <div class="form-group">
-                      <label>Kapan akan Mulai Kerja</label>
-                         <input type="text" id="on_duty_date2" name="on_duty_date" class="form-control" placeholder="On Duty Date" required>
+                      <div class="form-group col-xs-6">
+                          <label>Kapan akan Mulai Kerja</label>
+                         <input type="text" id="on_duty_date" name="on_duty_date" class="form-control" placeholder="On Duty Date" required>
                      </div>
                  </div>
                  <div class="modal-footer">
@@ -333,15 +357,22 @@
                                                     // alert(jadi);
                                                 }
                                                 coba = jadi[0]+jadi[1] + jadi[2] + jadi[3] +jadi[4] + jadi[5] +jadi[6] +jadi[7] +jadi[8] +jadi[9] +jadi[10] +jadi[11]; 
-
                                                 return '<b>'+coba+'</b>';
+                                                // return '<b>'+coba+'OTHER'+'<br>' +'&#10004;' +row['other'] +'</b>';
                                                 }
                                                 },
+                                                {"data": "other"},
                                                 {"data": "location"},
                                                 {"data": "poh"},
                                                 {"data": "duration"},
-                                                {"data": "work_schedule"},
-                                                {"data": "ratefee_benef"},
+                                                // {"data": "work_schedule"},
+                                                {"data": null,
+                                                "render" : function ( data, type, full ) { 
+                                                return full['work_schedule']+' / '+full['work_schedule_2'];},"searchable": false},
+                                                // {"data": "ratefee_benef"},
+                                                {"data": null,
+                                                "render" : function ( data, type, full ) { 
+                                                return full['ratefee_benef']+' / '+full['ratefee_benef_2'];},"searchable": false},
                                                 {"data": "purpose"},
                                                 {"data": "to_site_date"},
                                                 {"data": "on_duty_date"},
@@ -389,9 +420,12 @@
                     // $("input[name='qualification']").val(data.qualification);
                     $("input[name='location']").val(data.location);
                     $("input[name='poh']").val(data.poh);
+                    $("input[name='other']").val(data.other);
                     $("input[name='duration']").val(data.duration);
                     $("input[name='work_schedule']").val(data.work_schedule);
+                    $("input[name='work_schedule_2']").val(data.work_schedule_2);
                     $("input[name='rt_bef']").val(data.ratefee_benef);
+                    $("input[name='rt_bef_2']").val(data.ratefee_benef_2);
                     $("input[name='purpose']").val(data.purpose);
                     $("input[name='to_site_date']").val(data.to_site_date);
                     $("input[name='on_duty_date']").val( data.on_duty_date);
@@ -440,6 +474,7 @@
 
 
       });
+
             // End Edit Records
             // get delete Records
             $('#mytable').on('click','.delete_record',function(){

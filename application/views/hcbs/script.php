@@ -13,10 +13,13 @@
                          <input type="text" name="client" class="form-control" placeholder="Client" required>
                      </div>
                      <div class="form-group">
-                        <label>Masukan Project Priode</label>
-                         <input type="text" id = "date_priod" name="project_priod" class="form-control" placeholder="Project Priod" required>
+                        <label>Masukan Start Project Priode</label>
+                         <input type="text" id = "date_priod_start" name="project_priod_start" class="form-control" placeholder="Project Priod" required>
                      </div>
-
+                     <div class="form-group">
+                        <label>Masukan End Project Priode</label>
+                         <input type="text" id = "date_priod_end" name="project_priod_end" class="form-control" placeholder="Project Priod" required>
+                     </div>
                      <div class="form-group">
                      <label>Masukan PIC Marketing</label>
                          <input type="text" name="pic_market" class="form-control" placeholder="PIC Marketing" required>
@@ -51,9 +54,11 @@
                          <input type="text" name="client" class="form-control" placeholder="Client" required>
                      </div>
                      <div class="form-group">
-                         <input type="text" id="date_priod2" name="project_priod" class="form-control" placeholder="Project Priod" required>
+                         <input type="text" id="date_priod2" name="project_priod_start" class="form-control" placeholder="Project Priod" required>
                      </div>
-
+                     <div class="form-group">
+                         <input type="text" id="date_priod3" name="project_priod_end" class="form-control" placeholder="Project Priod" required>
+                     </div>
                      <div class="form-group">
                          <input type="text" name="pic_market" class="form-control" placeholder="PIC Marketing" required>
                      </div>
@@ -129,6 +134,8 @@
                                                 {"data": "client_v","searchable": false},
                                                 {"data": "client","visible":false},
                                                 {"data": "project_priod"},
+                                                {"data": "project_priod_end"},
+
                                                 //render number format for price
                                                 // {"data": "product_price", render: $.fn.dataTable.render.number(',', '.', '')},
                                                 {"data": "pic_market"},
@@ -153,14 +160,20 @@
                         var priod=$(this).data('priod');
                         var market=$(this).data('market');
                         var medsit=$(this).data('medsit');
+                        var priod_end=$(this).data('priod_end');
+
                   date = priod.split("-").reverse().join("/");
+                  date_end = priod_end.split("-").reverse().join("/");
+
 // alert(date);
             $('#ModalUpdate').modal('show');
             $('[name="id_d"]').val(code);
                         $('[name="client"]').val(client);
-                        $('[name="project_priod"]').val(date);
+                        $('[name="project_priod_start"]').val(date);
                         $('[name="pic_market"]').val(market);
                         $('[name="pic_medsite"]').val(medsit);
+                        $('[name="project_priod_end"]').val(date_end);
+
 
       });
             // End Edit Records
@@ -173,14 +186,21 @@
             // End delete Records
 
 
-            $('#date_priod').datepicker({
+            $('#date_priod_start').datepicker({
                 autoclose: true
                 })
+
+            $('#date_priod_end').datepicker({
+                autoclose: true
+                })
+
 
             $('#date_priod2').datepicker({
                 autoclose: true
                 })
-
+            $('#date_priod3').datepicker({
+                autoclose: true
+                })
 
     });
 function downloadsap(){

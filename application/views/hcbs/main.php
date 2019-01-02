@@ -34,6 +34,7 @@
                   <th>Client</th>
                   <th>Client</th>
                   <th>Project Priod</th>
+                  <th>Project Priod End</th>
                   <th>PIC Marketing</th>
                   <th>PIC Medsite</th>
                   <th>Created By</th>
@@ -49,6 +50,7 @@
                   <th>Client</th>
                   <th>Client</th>
                   <th>Project Priod</th>
+                  <th>Project Priod_End</th>
                   <th>PIC Marketing</th>
                   <th>PIC Medsite</th>
                   <th>Created By</th>

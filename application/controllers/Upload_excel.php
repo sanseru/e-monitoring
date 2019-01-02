@@ -67,8 +67,8 @@ class Upload_excel extends CI_Controller {
 				IF($row['A']==5){
 					$coba = 'Uji COba';
 				}
-				$todate = date('Y-m-d', strtotime($row['W']));
-				$ondate = date('Y-m-d', strtotime($row['X']));
+				$todate = date('Y-m-d', strtotime($row['Y']));
+				$ondate = date('Y-m-d', strtotime($row['Z']));
 
 				$atls = $row['D']; // Ambil data alamat
 				$hiperkes = $row['E']; // Ambil data alamat
@@ -106,12 +106,15 @@ class Upload_excel extends CI_Controller {
 					'jml_person'=>$row['B'], // Insert data nama dari kolom B di excel
 					'exprience'=>$row['C'], // Insert data nama dari kolom B di excel
 					'qualification'=>$result, // Insert data jenis kelamin dari kolom C di excel
+					'other'=>$row['P'], // Insert data alamat dari kolom D di excel
 					'location'=>$row['Q'], // Insert data alamat dari kolom D di excel
 					'poh'=>$row['R'], // Insert data alamat dari kolom D di excel
 					'duration'=>$row['S'], // Insert data alamat dari kolom D di excel
 					'work_schedule'=>$row['T'], // Insert data alamat dari kolom D di excel
-					'ratefee_benef'=>$row['U'], // Insert data alamat dari kolom D di excel
-					'purpose'=>$row['V'], // Insert data alamat dari kolom D di excel
+					'work_schedule_2'=>$row['U'], // Insert data alamat dari kolom D di excel
+					'ratefee_benef'=>$row['V'], // Insert data alamat dari kolom D di excel
+					'ratefee_benef_2'=>$row['W'], // Insert data alamat dari kolom D di excel
+					'purpose'=>$row['X'], // Insert data alamat dari kolom D di excel
 					'to_site_date'=>$todate, // Insert data alamat dari kolom D di excel
 					'on_duty_date'=>$ondate, // Insert data alamat dari kolom D di excel
 					'created_date'=>$now, // Insert data alamat dari kolom D di excel

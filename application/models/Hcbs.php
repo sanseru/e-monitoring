@@ -18,21 +18,24 @@ class Hcbs extends CI_Model{
   }
   //generate dataTable serverside method
   function get_all_product() {
-      $this->datatables->select('a.idt_rec_main,a.client,a.project_priod,a.pic_market,a.pic_medsite,a.created_by,b.username');
+      $this->datatables->select('a.idt_rec_main,a.client,a.project_priod,a.project_priod_end,a.pic_market,a.pic_medsite,a.created_by,b.username');
       $this->datatables->from('t_rec_main a');
       $this->datatables->join('users b', 'a.created_by=b.id','left');
       $this->datatables->edit_column('client_v', '<a href="recruitment/detail_perclient/$1">$2</a>', 'idt_rec_main, client');
-      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-client="$2" data-priod="$3" data-market="$4" data-medsit="$5">Edit</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a>','idt_rec_main,client,project_priod,pic_market,pic_medsite');
+      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-client="$2" data-priod="$3" data-market="$4" data-medsit="$5" data-priod_end="$6">Edit</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a>','idt_rec_main,client,project_priod,pic_market,pic_medsite,project_priod_end');
       return $this->datatables->generate();
   }
   //insert data method
   function insert_product(){
         date_default_timezone_set('Asia/Jakarta');
         $now = date('y-m-d H:i:s');
-        $cdate = date('Y-m-d H:i:s', strtotime($this->input->post('project_priod')));
+        $cdate_start = date('Y-m-d', strtotime($this->input->post('project_priod_start')));
+        $cdate_end = date('Y-m-d', strtotime($this->input->post('project_priod_end')));
+
       $data=array(
         'client'        => $this->input->post('client'),
-        'project_priod'        => $cdate,
+        'project_priod'        => $cdate_start,
+        'project_priod_end'        => $cdate_end,
         'pic_market'       => $this->input->post('pic_market'),
         'pic_medsite' => $this->input->post('pic_medsite'),
         'created_by' => $this->ion_auth->user()->row()->id,
@@ -46,11 +49,14 @@ class Hcbs extends CI_Model{
 
   //update data method
   function update_product(){
-            $cdate = date('Y-m-d', strtotime($this->input->post('project_priod')));
+            $cdate = date('Y-m-d', strtotime($this->input->post('project_priod_start')));
+            $cdate_end = date('Y-m-d', strtotime($this->input->post('project_priod_end')));
+
       $product_code=$this->input->post('id_d');
       $data=array(
         'client'        => $this->input->post('client'),
         'project_priod'        => $cdate,
+        'project_priod_end'        => $cdate_end,
         'pic_market'       => $this->input->post('pic_market'),
         'pic_medsite' => $this->input->post('pic_medsite'),
         'modify_by' => $this->ion_auth->user()->row()->id,
@@ -73,7 +79,7 @@ class Hcbs extends CI_Model{
 
           // $id = $this->uri->segment(3);
 
-      $this->datatables->select('a.detail_id,a.id_main,a.exprience,a.position,a.jml_person,a.location,a.created_by,b.username,a.qualification,a.poh,a.duration,a.work_schedule,a.ratefee_benef,a.purpose,a.to_site_date,a.on_duty_date');
+      $this->datatables->select('a.detail_id,a.id_main,a.exprience,a.position,a.jml_person,a.location,a.created_by,b.username,a.qualification,a.poh,a.duration,a.work_schedule,a.work_schedule_2,a.ratefee_benef,a.ratefee_benef_2,a.purpose,a.to_site_date,a.on_duty_date,a.other');
       $this->datatables->from('t_rec_main_detail a');
       $this->datatables->join('users b', 'a.created_by=b.id','left');
       $this->datatables->where('id_main', $test);
@@ -95,11 +101,14 @@ class Hcbs extends CI_Model{
       'jml_person'       => $this->input->post('jml_person'),
       'exprience' => $this->input->post('exp'),
       'qualification'=>$hasil,
+      'other' => $this->input->post('other'),
       'location' => $this->input->post('location'),
       'poh' => $this->input->post('poh'),
       'duration' => $this->input->post('duration'),
       'work_schedule' => $this->input->post('work_schedule'),
+      'work_schedule_2' => $this->input->post('work_schedule_2'),
       'ratefee_benef' => $this->input->post('rt_bef'),
+      'ratefee_benef_2' => $this->input->post('rt_bef_2'),
       'purpose' => $this->input->post('purpose'),
       'to_site_date' => $cdate1,
       'on_duty_date' => $cdate2,
@@ -125,10 +134,13 @@ class Hcbs extends CI_Model{
   'exprience' => $this->input->post('exp'),
   'qualification'=>$hasil,
   'location' => $this->input->post('location'),
+  'other' => $this->input->post('other'),
   'poh' => $this->input->post('poh'),
   'duration' => $this->input->post('duration'),
   'work_schedule' => $this->input->post('work_schedule'),
+  'work_schedule_2' => $this->input->post('work_schedule_2'),
   'ratefee_benef' => $this->input->post('rt_bef'),
+  'ratefee_benef_2' => $this->input->post('rt_bef_2'),
   'purpose' => $this->input->post('purpose'),
   'to_site_date' => $cdate1,
   'on_duty_date' => $cdate2,

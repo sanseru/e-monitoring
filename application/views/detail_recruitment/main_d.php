@@ -72,6 +72,7 @@ foreach ($ambil_data as $row) {
                   <th>Person</th>
                   <th>Exprience</th>
                   <th class="remove">Qualification</th>
+                  <th>Other Qualification</th>
                   <th>Location</th>
                   <th>Point of Hire</th>
                   <th>Duration</th>
@@ -95,6 +96,7 @@ foreach ($ambil_data as $row) {
                   <th>Person</th>
                   <th>Exprience</th>
                   <th>Qualification</th>
+                  <th>Other Qualification</th>
                   <th>Location</th>
                   <th>Point of Hire</th>
                   <th>Duration</th>
