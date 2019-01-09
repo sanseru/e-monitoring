@@ -170,7 +170,7 @@ return $result;
 
     // $id = $this->uri->segment(3);
 
-$this->datatables->select('a.id_employee,a.id_position,a.e_name,a.is_accept,a.e_status,a.description,a.created_by,b.username');
+$this->datatables->select('a.id_employee,a.id_position,a.e_name,a.is_accept,a.e_status,a.description,a.created_by,a.cv_file,b.username');
 $this->datatables->from('t_rec_employee a');
 $this->datatables->join('users b', 'a.created_by=b.id','left');
 $this->datatables->where('a.id_position', $id);
@@ -189,6 +189,8 @@ return $this->datatables->generate();
     'e_name'        => $this->input->post('name_e'),
     'e_status'       => $this->input->post('st'),
     'description'       => $this->input->post('description'),
+    'cv_file'              =>$this->_uploadFile(),
+    // 'photo'              =>$this->_uploadPhoto(),
     'created_by' => $this->ion_auth->user()->row()->id,
     'created_date' => $now,
 
@@ -196,6 +198,43 @@ return $this->datatables->generate();
   $result=$this->db->insert('t_rec_employee', $data);
   return $this->db->insert_id();
 }
+// function _uploadPhoto()
+// {
+//     $config['upload_path']          = FCPATH . '/upload/photo/';
+//     $config['allowed_types']        = 'gif|jpg|png';
+//     $config['file_name']            = uniqid();
+//     $config['overwrite']			= true;
+//     $config['max_size']             = 7024; // 1MB
+//     // $config['max_width']            = 1024;
+//     // $config['max_height']           = 768;
+
+//     $this->load->library('upload', $config);
+
+//     if ($this->upload->do_upload('poto')) {
+//         return $this->upload->data("file_name");
+//     }
+    
+//     return "";
+// }
+private function _uploadFile()
+{
+    $config['upload_path']          = FCPATH . '/upload/';
+    $config['allowed_types']        = 'pdf';
+    $config['file_name']            = uniqid();
+    $config['overwrite']			= true;
+    $config['max_size']             = 7024; // 1MB
+    // $config['max_width']            = 1024;
+    // $config['max_height']           = 768;
+
+    $this->load->library('upload', $config);
+
+    if ($this->upload->do_upload('cv_file')) {
+        return $this->upload->data("file_name");
+    }
+    
+    return "";
+}
+
     //update data method
     function update_product_employe(){
       date_default_timezone_set('Asia/Jakarta');

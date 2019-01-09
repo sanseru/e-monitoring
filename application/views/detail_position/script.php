@@ -1,5 +1,5 @@
 <!-- Modal Add Product-->
-<form id="add-row-form" action="<?php echo site_url('recruitment/save_employee');?>" method="post">
+<form id="add-row-form" action="<?php echo site_url('recruitment/save_employee');?>" method="post" enctype="multipart/form-data">
   <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -40,7 +40,15 @@
                       style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
             </textarea>
           </div>
-          
+          <div class="form-group">
+                  <label for="poto">Masukan gambar</label>
+                  <input type="file" id="poto" name="poto">
+                </div>
+
+          <div class="form-group">
+                  <label for="cv_file">File input</label>
+                  <input type="file" id="cv_file" name="cv_file">
+                </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close
@@ -233,6 +241,12 @@
           // {"data": "product_price", render: $.fn.dataTable.render.number(',', '.', '')},
             {"data": "e_status","className": "text-center"},
             {"data": "description","className": "text-center"},
+            // {"data": null,
+            //     "render" : function ( data, type, full ) { 
+            //       return '<a href="user_project_edit.php?project='+data.projects.projectid+'" target="_blank">User Project Edit Page</a>'},
+            {"data": "cv_file",
+                                                "render" : function ( data, type, full, meta ) { 
+                                                return '<a href="<?php echo base_url();?>/upload/'+data+'">Download</a>';}},
             {"data": "is_accept","visible": false,"targets": 3},
             {"data": "view","className": "text-center"},
         ],
