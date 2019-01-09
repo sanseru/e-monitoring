@@ -21,7 +21,7 @@
           <div class="form-group">
             <label>Status
             </label>
-            <input type="text" name="st" class="form-control" placeholder="Masukan Nama Recruitment Employee" required>                     
+            <input type="text" name="st" class="form-control" placeholder="Masukan Status Recruitment Employee" required>                     
           </div>
           <div class="form-group">
             <!-- <input type="text" id = "status" name="status" class="form-control" placeholder="Masukan Status Sekarang" required> -->
@@ -40,10 +40,10 @@
                       style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
             </textarea>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
                   <label for="poto">Masukan gambar</label>
                   <input type="file" id="poto" name="poto">
-                </div>
+                </div> -->
 
           <div class="form-group">
                   <label for="cv_file">File input</label>
@@ -86,7 +86,7 @@
             <div class="form-group">
               <label>Status
               </label>
-              <input type="text" name="st" class="form-control" placeholder="Masukan Nama Recruitment Employee" required>                     
+              <input type="text" name="st" class="form-control" placeholder="Masukan status Recruitment Employee" required>                     
             </div>
           </div>
           <div class="modal-footer">
