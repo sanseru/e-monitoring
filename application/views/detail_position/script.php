@@ -246,7 +246,7 @@
             //       return '<a href="user_project_edit.php?project='+data.projects.projectid+'" target="_blank">User Project Edit Page</a>'},
             {"data": "cv_file",
                                                 "render" : function ( data, type, full, meta ) { 
-                                                return '<a href="<?php echo base_url();?>/upload/'+data+'">Download</a>';}},
+                                                return '<a href="<?php echo base_url();?>/upload/'+data+'" target="_blank">Download</a>';}},
             {"data": "is_accept","visible": false,"targets": 3},
             {"data": "view","className": "text-center"},
         ],

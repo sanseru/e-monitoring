@@ -22,7 +22,7 @@ class Hcbs extends CI_Model{
       $this->datatables->from('t_rec_main a');
       $this->datatables->join('users b', 'a.created_by=b.id','left');
       $this->datatables->edit_column('client_v', '<a href="recruitment/detail_perclient/$1">$2</a>', 'idt_rec_main, client');
-      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-client="$2" data-priod="$3" data-market="$4" data-medsit="$5" data-priod_end="$6">Edit</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a>','idt_rec_main,client,project_priod,pic_market,pic_medsite,project_priod_end');
+      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info btn-xs" data-code="$1" data-client="$2" data-priod="$3" data-market="$4" data-medsit="$5" data-priod_end="$6"><i class="fa fa-pencil"></i></a>  <a href="javascript:void(0);" class="delete_record btn btn-danger btn-xs" data-code="$1"><i class="fa fa-trash"></i></a>','idt_rec_main,client,project_priod,pic_market,pic_medsite,project_priod_end');
       return $this->datatables->generate();
   }
   //insert data method
@@ -84,7 +84,7 @@ class Hcbs extends CI_Model{
       $this->datatables->join('users b', 'a.created_by=b.id','left');
       $this->datatables->where('id_main', $test);
       $this->datatables->edit_column('client_v', '<button type="button" class="btn btn-block btn-info"><a id="link" href="../detail_position/$1"><b>$2</b></a></button>', 'detail_id, position');
-      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-id_main="$2" data-position="$3" data-jml_person="$4" data-location="$5" data-qualification="$6" data-poh="$7" data-duration="$8" data-schedule="$9" data-rate="$10" data-purpose="$11" data-site="$12" data-date="$13">Edit</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a>','detail_id,id_main,position,jml_person,location,qualification,poh,duration,work_schedule,ratefee_benef,purpose,to_site_date,on_duty_date,exprience');
+      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info btn-xs" data-code="$1" data-id_main="$2" data-position="$3" data-jml_person="$4" data-location="$5" data-qualification="$6" data-poh="$7" data-duration="$8" data-schedule="$9" data-rate="$10" data-purpose="$11" data-site="$12" data-date="$13"><i class="fa fa-pencil"></i></a>  <a href="javascript:void(0);" class="delete_record btn btn-danger btn-xs" data-code="$1"><i class="fa fa-trash"></i></a>','detail_id,id_main,position,jml_person,location,qualification,poh,duration,work_schedule,ratefee_benef,purpose,to_site_date,on_duty_date,exprience');
       return $this->datatables->generate();
   }
     //insert data method
@@ -175,7 +175,7 @@ $this->datatables->from('t_rec_employee a');
 $this->datatables->join('users b', 'a.created_by=b.id','left');
 $this->datatables->where('a.id_position', $id);
 $this->datatables->edit_column('client_v', '<a href="../komentar_tl/$1" class="comment btn btn-info" data-code="$1" data-id_main="$2" >$2</a>', 'id_employee,e_name');
-$this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-name="$2" data-status="$3" data-position="$4" >Edit</a> <a href="../komentar_tl/$1" class="komentar btn btn-info" data-code="$1" data-id_main="$2" >Komentar</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a><a href="javascript:void(0);" class="diterima_record btn btn-success" data-code="$1" data-name="$2" data-status="$3" data-position="$4" > Diterima</a>','id_employee,e_name,e_status,id_position');
+$this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info btn-xs" data-code="$1" data-name="$2" data-status="$3" data-position="$4" ><i class="fa fa-pencil"></i></a> <a href="../komentar_tl/$1" class="komentar btn btn-info btn-xs" data-code="$1" data-id_main="$2" ><i class="fa fa-comment"></i></a>  <a href="javascript:void(0);" class="delete_record btn btn-danger btn-xs" data-code="$1"><i class="fa fa-trash"></i></a> <a href="javascript:void(0);" class="diterima_record btn btn-success btn-xs" data-code="$1" data-name="$2" data-status="$3" data-position="$4" ><i class="fa fa-check"></i></a>','id_employee,e_name,e_status,id_position');
 return $this->datatables->generate();
 }
 
