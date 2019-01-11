@@ -79,7 +79,39 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <!-- /.col -->
+
+        <div class="col-md-4">
+          <div class="box box-default">
+            <div class="box-header with-border">
+              <i class="fa fa-bullhorn"></i>
+
+              <h3 class="box-title">CATATAN</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="callout callout-success">
+                <h4>KETERANGAN JIKA SUDAH TERPILIH</h4>
+
+                <p>Jika Baris sudah menjadi Hijau pada Kandidat maka kandidat sudah diterima</p>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+
+
     </section>
     <!-- /.content -->
+
+
   </div>
   <!-- /.content-wrapper -->
