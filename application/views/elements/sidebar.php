@@ -61,7 +61,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="">
             <i class="fa fa-dashboard"></i> <span>Input</span>
             <span class="pull-right-container">
@@ -71,7 +71,7 @@
           <ul class="treeview-menu">
             <li class="active"><a href="<?php echo base_url().'index.php/main/rec_request'?>"><i class="fa fa-circle-o"></i>Recruitment</a></li>
           </ul>
-        </li>
+        </li> -->
         <?php
     }elseif($this->ion_auth->in_group('HCBS')){
 
