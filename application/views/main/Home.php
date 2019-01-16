@@ -30,6 +30,7 @@
                   <th>Untuk Client</th>
                   <th>Posisi</th>
                   <th>Lokasi</th>
+                  <th>Status</th>
                   <th>Lihat CV</th>
                 </tr>
                 </thead>
@@ -49,6 +50,7 @@
                             <td <?php echo $background?>><?php echo $row->client ?> </td>
                             <td <?php echo $background?>><?php echo $row->position ?> </td>
                             <td <?php echo $background?>><?php echo $row->location ?> </td>
+                            <td <?php echo $background?>><?php echo $row->e_status ?> </td>
                             <td <?php echo $background?>>
                             <a class="btn btn-info btn-xs" href="<?php echo base_url('upload/'.$row->cv_file);?>"  target="_blank"><i class="fa fa-eye"></i> CV</a>
                             <a class="btn btn-info btn-xs" href="<?php echo base_url().'index.php/recruitment/komentar_tl/'.$row->id_employee?>"><i class="fa fa-comments"></i>Komentar</a>
@@ -67,6 +69,7 @@
                   <th>Untuk Client</th>
                   <th>Posisi</th>
                   <th>Lokasi</th>
+                  <th>Status</th>                  
                   <th>Lihat CV</th>
                 </tr>
                 </tfoot>
