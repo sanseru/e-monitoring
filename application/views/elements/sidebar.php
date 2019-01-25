@@ -77,6 +77,14 @@
 
     
     ?>
+            <li>
+          <a href="<?php echo site_url('Main') ?>">
+            <i class="fa fa-th"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span>
+          </a>
+        </li>
         <li class="treeview">
           <a href="">
             <i class="fa fa-dashboard"></i> <span>Input</span>
