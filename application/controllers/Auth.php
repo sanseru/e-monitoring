@@ -54,7 +54,7 @@ class Auth extends CI_Controller
 	}
 
 	/**
-	 * Log the user in
+	 * Log the user in 
 	 */
 	public function login()
 	{
@@ -96,11 +96,15 @@ class Auth extends CI_Controller
 				'id' => 'identity',
 				'type' => 'text',
 				'class'=> 'form-control',
+				'placeholder' => 'Masukan email',
+
 				'value' => $this->form_validation->set_value('identity'),
 			);
 			$this->data['password'] = array('name' => 'password',
 				'id' => 'password',
 				'type' => 'password',
+				'placeholder' => 'Masukan Password',
+
 				'class'=> 'form-control',
 			);
 
